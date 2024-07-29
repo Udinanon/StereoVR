@@ -1,4 +1,4 @@
-local Stereo = require("Stereo3D.Stereo")
+local Stereo = require("StereoVR.Stereo")
 
 function lovr.load()
   Stereo:init('3d')

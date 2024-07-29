@@ -18,10 +18,10 @@ function Stereo:init(mode, fov, ipd, focus_distance)
     -- Choose mode to run in
     if self.mode == "stereo" then
         self.width = lovr.system.getWindowWidth() *.5
-        self.stereoShader = lovr.graphics.newShader('fill', "Stereo3D/Stereo.glsl")
+        self.stereoShader = lovr.graphics.newShader('fill', "StereoVR/Stereo.glsl")
     elseif self.mode == "3d" then        
         self.width = lovr.system.getWindowWidth()
-        self.stereoShader = lovr.graphics.newShader('fill', "Stereo3D/Dubois.glsl")
+        self.stereoShader = lovr.graphics.newShader('fill', "StereoVR/Dubois.glsl")
     end
     self.views = 2
     self.height = lovr.system.getWindowHeight()
