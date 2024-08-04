@@ -105,7 +105,8 @@ function Stereo:integrate()
         if self.ANDROID then
             return existing_cb.draw(pass)
         else
-            return lovr.graphics.submit(Stereo:render(existing_cb.draw))
+            existing_cb.draw(pass)
+            return lovr.graphics.submit({pass, Stereo:render(existing_cb.draw)})
         end
     end
 
